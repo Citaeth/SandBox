@@ -1,0 +1,4316 @@
+set cut_paste_input [stack 0]
+version 14.0 v3
+BackdropNode {
+ inputs 0
+ name BackDrop_ContactSheet
+ tile_color 0x242b49ff
+ label "Sequence ContactSheet"
+ note_font_size 28
+ selected true
+ xpos -250
+ ypos -13
+ bdwidth 29980
+ bdheight 915
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant148
+ selected true
+ xpos 29500
+ ypos 50
+}
+Dot {
+ name Dot148
+ selected true
+ xpos 29534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read148
+ selected true
+ xpos 29400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch148
+ label "\[value this.which]"
+ selected true
+ xpos 29400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop148
+ selected true
+ xpos 29400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text148
+ selected true
+ xpos 29400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial148
+ selected true
+ xpos 29400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant147
+ selected true
+ xpos 29300
+ ypos 50
+}
+Dot {
+ name Dot147
+ selected true
+ xpos 29334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read147
+ selected true
+ xpos 29200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch147
+ label "\[value this.which]"
+ selected true
+ xpos 29200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop147
+ selected true
+ xpos 29200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text147
+ selected true
+ xpos 29200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial147
+ selected true
+ xpos 29200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant146
+ selected true
+ xpos 29100
+ ypos 50
+}
+Dot {
+ name Dot146
+ selected true
+ xpos 29134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read146
+ selected true
+ xpos 29000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch146
+ label "\[value this.which]"
+ selected true
+ xpos 29000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop146
+ selected true
+ xpos 29000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text146
+ selected true
+ xpos 29000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial146
+ selected true
+ xpos 29000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant145
+ selected true
+ xpos 28900
+ ypos 50
+}
+Dot {
+ name Dot145
+ selected true
+ xpos 28934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read145
+ selected true
+ xpos 28800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch145
+ label "\[value this.which]"
+ selected true
+ xpos 28800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop145
+ selected true
+ xpos 28800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text145
+ selected true
+ xpos 28800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial145
+ selected true
+ xpos 28800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant144
+ selected true
+ xpos 28700
+ ypos 50
+}
+Dot {
+ name Dot144
+ selected true
+ xpos 28734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read144
+ selected true
+ xpos 28600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch144
+ label "\[value this.which]"
+ selected true
+ xpos 28600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop144
+ selected true
+ xpos 28600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text144
+ selected true
+ xpos 28600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial144
+ selected true
+ xpos 28600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant143
+ selected true
+ xpos 28500
+ ypos 50
+}
+Dot {
+ name Dot143
+ selected true
+ xpos 28534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read143
+ selected true
+ xpos 28400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch143
+ label "\[value this.which]"
+ selected true
+ xpos 28400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop143
+ selected true
+ xpos 28400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text143
+ selected true
+ xpos 28400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial143
+ selected true
+ xpos 28400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant142
+ selected true
+ xpos 28300
+ ypos 50
+}
+Dot {
+ name Dot142
+ selected true
+ xpos 28334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read142
+ selected true
+ xpos 28200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch142
+ label "\[value this.which]"
+ selected true
+ xpos 28200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop142
+ selected true
+ xpos 28200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text142
+ selected true
+ xpos 28200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial142
+ selected true
+ xpos 28200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant141
+ selected true
+ xpos 28100
+ ypos 50
+}
+Dot {
+ name Dot141
+ selected true
+ xpos 28134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read141
+ selected true
+ xpos 28000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch141
+ label "\[value this.which]"
+ selected true
+ xpos 28000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop141
+ selected true
+ xpos 28000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text141
+ selected true
+ xpos 28000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial141
+ selected true
+ xpos 28000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant140
+ selected true
+ xpos 27900
+ ypos 50
+}
+Dot {
+ name Dot140
+ selected true
+ xpos 27934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read140
+ selected true
+ xpos 27800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch140
+ label "\[value this.which]"
+ selected true
+ xpos 27800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop140
+ selected true
+ xpos 27800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text140
+ selected true
+ xpos 27800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial140
+ selected true
+ xpos 27800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant139
+ selected true
+ xpos 27700
+ ypos 50
+}
+Dot {
+ name Dot139
+ selected true
+ xpos 27734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read139
+ selected true
+ xpos 27600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch139
+ label "\[value this.which]"
+ selected true
+ xpos 27600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop139
+ selected true
+ xpos 27600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text139
+ selected true
+ xpos 27600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial139
+ selected true
+ xpos 27600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant138
+ selected true
+ xpos 27500
+ ypos 50
+}
+Dot {
+ name Dot138
+ selected true
+ xpos 27534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read138
+ selected true
+ xpos 27400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch138
+ label "\[value this.which]"
+ selected true
+ xpos 27400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop138
+ selected true
+ xpos 27400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text138
+ selected true
+ xpos 27400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial138
+ selected true
+ xpos 27400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant137
+ selected true
+ xpos 27300
+ ypos 50
+}
+Dot {
+ name Dot137
+ selected true
+ xpos 27334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read137
+ selected true
+ xpos 27200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch137
+ label "\[value this.which]"
+ selected true
+ xpos 27200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop137
+ selected true
+ xpos 27200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text137
+ selected true
+ xpos 27200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial137
+ selected true
+ xpos 27200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant136
+ selected true
+ xpos 27100
+ ypos 50
+}
+Dot {
+ name Dot136
+ selected true
+ xpos 27134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read136
+ selected true
+ xpos 27000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch136
+ label "\[value this.which]"
+ selected true
+ xpos 27000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop136
+ selected true
+ xpos 27000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text136
+ selected true
+ xpos 27000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial136
+ selected true
+ xpos 27000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant135
+ selected true
+ xpos 26900
+ ypos 50
+}
+Dot {
+ name Dot135
+ selected true
+ xpos 26934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read135
+ selected true
+ xpos 26800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch135
+ label "\[value this.which]"
+ selected true
+ xpos 26800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop135
+ selected true
+ xpos 26800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text135
+ selected true
+ xpos 26800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial135
+ selected true
+ xpos 26800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant134
+ selected true
+ xpos 26700
+ ypos 50
+}
+Dot {
+ name Dot134
+ selected true
+ xpos 26734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read134
+ selected true
+ xpos 26600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch134
+ label "\[value this.which]"
+ selected true
+ xpos 26600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop134
+ selected true
+ xpos 26600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text134
+ selected true
+ xpos 26600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial134
+ selected true
+ xpos 26600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant133
+ selected true
+ xpos 26500
+ ypos 50
+}
+Dot {
+ name Dot133
+ selected true
+ xpos 26534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read133
+ selected true
+ xpos 26400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch133
+ label "\[value this.which]"
+ selected true
+ xpos 26400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop133
+ selected true
+ xpos 26400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text133
+ selected true
+ xpos 26400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial133
+ selected true
+ xpos 26400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant132
+ selected true
+ xpos 26300
+ ypos 50
+}
+Dot {
+ name Dot132
+ selected true
+ xpos 26334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read132
+ selected true
+ xpos 26200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch132
+ label "\[value this.which]"
+ selected true
+ xpos 26200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop132
+ selected true
+ xpos 26200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text132
+ selected true
+ xpos 26200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial132
+ selected true
+ xpos 26200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant131
+ selected true
+ xpos 26100
+ ypos 50
+}
+Dot {
+ name Dot131
+ selected true
+ xpos 26134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read131
+ selected true
+ xpos 26000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch131
+ label "\[value this.which]"
+ selected true
+ xpos 26000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop131
+ selected true
+ xpos 26000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text131
+ selected true
+ xpos 26000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial131
+ selected true
+ xpos 26000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant130
+ selected true
+ xpos 25900
+ ypos 50
+}
+Dot {
+ name Dot130
+ selected true
+ xpos 25934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read130
+ selected true
+ xpos 25800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch130
+ label "\[value this.which]"
+ selected true
+ xpos 25800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop130
+ selected true
+ xpos 25800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text130
+ selected true
+ xpos 25800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial130
+ selected true
+ xpos 25800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant129
+ selected true
+ xpos 25700
+ ypos 50
+}
+Dot {
+ name Dot129
+ selected true
+ xpos 25734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read129
+ selected true
+ xpos 25600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch129
+ label "\[value this.which]"
+ selected true
+ xpos 25600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop129
+ selected true
+ xpos 25600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text129
+ selected true
+ xpos 25600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial129
+ selected true
+ xpos 25600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant128
+ selected true
+ xpos 25500
+ ypos 50
+}
+Dot {
+ name Dot128
+ selected true
+ xpos 25534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read128
+ selected true
+ xpos 25400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch128
+ label "\[value this.which]"
+ selected true
+ xpos 25400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop128
+ selected true
+ xpos 25400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text128
+ selected true
+ xpos 25400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial128
+ selected true
+ xpos 25400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant127
+ selected true
+ xpos 25300
+ ypos 50
+}
+Dot {
+ name Dot127
+ selected true
+ xpos 25334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read127
+ selected true
+ xpos 25200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch127
+ label "\[value this.which]"
+ selected true
+ xpos 25200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop127
+ selected true
+ xpos 25200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text127
+ selected true
+ xpos 25200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial127
+ selected true
+ xpos 25200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant126
+ selected true
+ xpos 25100
+ ypos 50
+}
+Dot {
+ name Dot126
+ selected true
+ xpos 25134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read126
+ selected true
+ xpos 25000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch126
+ label "\[value this.which]"
+ selected true
+ xpos 25000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop126
+ selected true
+ xpos 25000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text126
+ selected true
+ xpos 25000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial126
+ selected true
+ xpos 25000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant125
+ selected true
+ xpos 24900
+ ypos 50
+}
+Dot {
+ name Dot125
+ selected true
+ xpos 24934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read125
+ selected true
+ xpos 24800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch125
+ label "\[value this.which]"
+ selected true
+ xpos 24800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop125
+ selected true
+ xpos 24800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text125
+ selected true
+ xpos 24800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial125
+ selected true
+ xpos 24800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant124
+ selected true
+ xpos 24700
+ ypos 50
+}
+Dot {
+ name Dot124
+ selected true
+ xpos 24734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read124
+ selected true
+ xpos 24600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch124
+ label "\[value this.which]"
+ selected true
+ xpos 24600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop124
+ selected true
+ xpos 24600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text124
+ selected true
+ xpos 24600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial124
+ selected true
+ xpos 24600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant123
+ selected true
+ xpos 24500
+ ypos 50
+}
+Dot {
+ name Dot123
+ selected true
+ xpos 24534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read123
+ selected true
+ xpos 24400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch123
+ label "\[value this.which]"
+ selected true
+ xpos 24400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop123
+ selected true
+ xpos 24400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text123
+ selected true
+ xpos 24400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial123
+ selected true
+ xpos 24400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant122
+ selected true
+ xpos 24300
+ ypos 50
+}
+Dot {
+ name Dot122
+ selected true
+ xpos 24334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read122
+ selected true
+ xpos 24200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch122
+ label "\[value this.which]"
+ selected true
+ xpos 24200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop122
+ selected true
+ xpos 24200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text122
+ selected true
+ xpos 24200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial122
+ selected true
+ xpos 24200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant121
+ selected true
+ xpos 24100
+ ypos 50
+}
+Dot {
+ name Dot121
+ selected true
+ xpos 24134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read121
+ selected true
+ xpos 24000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch121
+ label "\[value this.which]"
+ selected true
+ xpos 24000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop121
+ selected true
+ xpos 24000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text121
+ selected true
+ xpos 24000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial121
+ selected true
+ xpos 24000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant120
+ selected true
+ xpos 23900
+ ypos 50
+}
+Dot {
+ name Dot120
+ selected true
+ xpos 23934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read120
+ selected true
+ xpos 23800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch120
+ label "\[value this.which]"
+ selected true
+ xpos 23800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop120
+ selected true
+ xpos 23800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text120
+ selected true
+ xpos 23800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial120
+ selected true
+ xpos 23800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant119
+ selected true
+ xpos 23700
+ ypos 50
+}
+Dot {
+ name Dot119
+ selected true
+ xpos 23734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read119
+ selected true
+ xpos 23600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch119
+ label "\[value this.which]"
+ selected true
+ xpos 23600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop119
+ selected true
+ xpos 23600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text119
+ selected true
+ xpos 23600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial119
+ selected true
+ xpos 23600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant118
+ selected true
+ xpos 23500
+ ypos 50
+}
+Dot {
+ name Dot118
+ selected true
+ xpos 23534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read118
+ selected true
+ xpos 23400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch118
+ label "\[value this.which]"
+ selected true
+ xpos 23400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop118
+ selected true
+ xpos 23400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text118
+ selected true
+ xpos 23400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial118
+ selected true
+ xpos 23400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant117
+ selected true
+ xpos 23300
+ ypos 50
+}
+Dot {
+ name Dot117
+ selected true
+ xpos 23334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read117
+ selected true
+ xpos 23200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch117
+ label "\[value this.which]"
+ selected true
+ xpos 23200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop117
+ selected true
+ xpos 23200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text117
+ selected true
+ xpos 23200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial117
+ selected true
+ xpos 23200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant116
+ selected true
+ xpos 23100
+ ypos 50
+}
+Dot {
+ name Dot116
+ selected true
+ xpos 23134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read116
+ selected true
+ xpos 23000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch116
+ label "\[value this.which]"
+ selected true
+ xpos 23000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop116
+ selected true
+ xpos 23000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text116
+ selected true
+ xpos 23000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial116
+ selected true
+ xpos 23000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant115
+ selected true
+ xpos 22900
+ ypos 50
+}
+Dot {
+ name Dot115
+ selected true
+ xpos 22934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read115
+ selected true
+ xpos 22800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch115
+ label "\[value this.which]"
+ selected true
+ xpos 22800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop115
+ selected true
+ xpos 22800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text115
+ selected true
+ xpos 22800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial115
+ selected true
+ xpos 22800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant114
+ selected true
+ xpos 22700
+ ypos 50
+}
+Dot {
+ name Dot114
+ selected true
+ xpos 22734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read114
+ selected true
+ xpos 22600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch114
+ label "\[value this.which]"
+ selected true
+ xpos 22600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop114
+ selected true
+ xpos 22600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text114
+ selected true
+ xpos 22600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial114
+ selected true
+ xpos 22600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant113
+ selected true
+ xpos 22500
+ ypos 50
+}
+Dot {
+ name Dot113
+ selected true
+ xpos 22534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read113
+ selected true
+ xpos 22400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch113
+ label "\[value this.which]"
+ selected true
+ xpos 22400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop113
+ selected true
+ xpos 22400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text113
+ selected true
+ xpos 22400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial113
+ selected true
+ xpos 22400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant112
+ selected true
+ xpos 22300
+ ypos 50
+}
+Dot {
+ name Dot112
+ selected true
+ xpos 22334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read112
+ selected true
+ xpos 22200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch112
+ label "\[value this.which]"
+ selected true
+ xpos 22200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop112
+ selected true
+ xpos 22200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text112
+ selected true
+ xpos 22200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial112
+ selected true
+ xpos 22200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant111
+ selected true
+ xpos 22100
+ ypos 50
+}
+Dot {
+ name Dot111
+ selected true
+ xpos 22134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read111
+ selected true
+ xpos 22000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch111
+ label "\[value this.which]"
+ selected true
+ xpos 22000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop111
+ selected true
+ xpos 22000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text111
+ selected true
+ xpos 22000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial111
+ selected true
+ xpos 22000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant110
+ selected true
+ xpos 21900
+ ypos 50
+}
+Dot {
+ name Dot110
+ selected true
+ xpos 21934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read110
+ selected true
+ xpos 21800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch110
+ label "\[value this.which]"
+ selected true
+ xpos 21800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop110
+ selected true
+ xpos 21800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text110
+ selected true
+ xpos 21800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial110
+ selected true
+ xpos 21800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant109
+ selected true
+ xpos 21700
+ ypos 50
+}
+Dot {
+ name Dot109
+ selected true
+ xpos 21734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read109
+ selected true
+ xpos 21600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch109
+ label "\[value this.which]"
+ selected true
+ xpos 21600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop109
+ selected true
+ xpos 21600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text109
+ selected true
+ xpos 21600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial109
+ selected true
+ xpos 21600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant108
+ selected true
+ xpos 21500
+ ypos 50
+}
+Dot {
+ name Dot108
+ selected true
+ xpos 21534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read108
+ selected true
+ xpos 21400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch108
+ label "\[value this.which]"
+ selected true
+ xpos 21400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop108
+ selected true
+ xpos 21400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text108
+ selected true
+ xpos 21400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial108
+ selected true
+ xpos 21400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant107
+ selected true
+ xpos 21300
+ ypos 50
+}
+Dot {
+ name Dot107
+ selected true
+ xpos 21334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read107
+ selected true
+ xpos 21200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch107
+ label "\[value this.which]"
+ selected true
+ xpos 21200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop107
+ selected true
+ xpos 21200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text107
+ selected true
+ xpos 21200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial107
+ selected true
+ xpos 21200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant106
+ selected true
+ xpos 21100
+ ypos 50
+}
+Dot {
+ name Dot106
+ selected true
+ xpos 21134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read106
+ selected true
+ xpos 21000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch106
+ label "\[value this.which]"
+ selected true
+ xpos 21000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop106
+ selected true
+ xpos 21000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text106
+ selected true
+ xpos 21000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial106
+ selected true
+ xpos 21000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant105
+ selected true
+ xpos 20900
+ ypos 50
+}
+Dot {
+ name Dot105
+ selected true
+ xpos 20934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read105
+ selected true
+ xpos 20800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch105
+ label "\[value this.which]"
+ selected true
+ xpos 20800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop105
+ selected true
+ xpos 20800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text105
+ selected true
+ xpos 20800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial105
+ selected true
+ xpos 20800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant104
+ selected true
+ xpos 20700
+ ypos 50
+}
+Dot {
+ name Dot104
+ selected true
+ xpos 20734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read104
+ selected true
+ xpos 20600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch104
+ label "\[value this.which]"
+ selected true
+ xpos 20600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop104
+ selected true
+ xpos 20600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text104
+ selected true
+ xpos 20600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial104
+ selected true
+ xpos 20600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant103
+ selected true
+ xpos 20500
+ ypos 50
+}
+Dot {
+ name Dot103
+ selected true
+ xpos 20534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read103
+ selected true
+ xpos 20400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch103
+ label "\[value this.which]"
+ selected true
+ xpos 20400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop103
+ selected true
+ xpos 20400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text103
+ selected true
+ xpos 20400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial103
+ selected true
+ xpos 20400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant102
+ selected true
+ xpos 20300
+ ypos 50
+}
+Dot {
+ name Dot102
+ selected true
+ xpos 20334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read102
+ selected true
+ xpos 20200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch102
+ label "\[value this.which]"
+ selected true
+ xpos 20200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop102
+ selected true
+ xpos 20200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text102
+ selected true
+ xpos 20200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial102
+ selected true
+ xpos 20200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant101
+ selected true
+ xpos 20100
+ ypos 50
+}
+Dot {
+ name Dot101
+ selected true
+ xpos 20134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read101
+ selected true
+ xpos 20000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch101
+ label "\[value this.which]"
+ selected true
+ xpos 20000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop101
+ selected true
+ xpos 20000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text101
+ selected true
+ xpos 20000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial101
+ selected true
+ xpos 20000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant100
+ selected true
+ xpos 19900
+ ypos 50
+}
+Dot {
+ name Dot100
+ selected true
+ xpos 19934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read100
+ selected true
+ xpos 19800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch100
+ label "\[value this.which]"
+ selected true
+ xpos 19800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop100
+ selected true
+ xpos 19800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text100
+ selected true
+ xpos 19800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial100
+ selected true
+ xpos 19800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant99
+ selected true
+ xpos 19700
+ ypos 50
+}
+Dot {
+ name Dot99
+ selected true
+ xpos 19734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read99
+ selected true
+ xpos 19600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch99
+ label "\[value this.which]"
+ selected true
+ xpos 19600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop99
+ selected true
+ xpos 19600
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text99
+ selected true
+ xpos 19600
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial99
+ selected true
+ xpos 19600
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant98
+ selected true
+ xpos 19500
+ ypos 50
+}
+Dot {
+ name Dot98
+ selected true
+ xpos 19534
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read98
+ selected true
+ xpos 19400
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch98
+ label "\[value this.which]"
+ selected true
+ xpos 19400
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop98
+ selected true
+ xpos 19400
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text98
+ selected true
+ xpos 19400
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial98
+ selected true
+ xpos 19400
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant97
+ selected true
+ xpos 19300
+ ypos 50
+}
+Dot {
+ name Dot97
+ selected true
+ xpos 19334
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read97
+ selected true
+ xpos 19200
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch97
+ label "\[value this.which]"
+ selected true
+ xpos 19200
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop97
+ selected true
+ xpos 19200
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text97
+ selected true
+ xpos 19200
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial97
+ selected true
+ xpos 19200
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant96
+ selected true
+ xpos 19100
+ ypos 50
+}
+Dot {
+ name Dot96
+ selected true
+ xpos 19134
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read96
+ selected true
+ xpos 19000
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch96
+ label "\[value this.which]"
+ selected true
+ xpos 19000
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop96
+ selected true
+ xpos 19000
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text96
+ selected true
+ xpos 19000
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial96
+ selected true
+ xpos 19000
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant95
+ selected true
+ xpos 18900
+ ypos 50
+}
+Dot {
+ name Dot95
+ selected true
+ xpos 18934
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read95
+ selected true
+ xpos 18800
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch95
+ label "\[value this.which]"
+ selected true
+ xpos 18800
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Crop95
+ selected true
+ xpos 18800
+ ypos 199
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[string range \[file tail \[value \[topnode].file]] 6 14] -- 1"
+ old_message {{32 45 45 32 49}
+   }
+ old_expression_markers {{0 -1}
+   }
+ transforms {{0 2}
+   }
+ center {1024 494}
+ cursor_initialised true
+ initial_cursor_position {{0 988}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1024 494 0 0 1 1 0 0 0 0}
+   }
+ name Text95
+ selected true
+ xpos 18800
+ ypos 243
+}
+Radial {
+ area {{"pos.x - RADIUS"} {"pos.y - RADIUS"} {"pos.x + RADIUS"} {"pos.y + RADIUS"}}
+ softness 0
+ color {{"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"RTK\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \[if \{\[value status]== \"APP\"\} \{return 1\} \{return \[if \{\[value status]== \"WIP\"\} \{return 0.5\} \{return 0\}]\}]\}]"} {"\[if \{\[value status]== \"RTS\"\} \{return 1\} \{return 0\[if \{\[value status]== \"CNT\"\} \{return 1\} \{return \}]\}]"} {1}}
+ name Radial95
+ selected true
+ xpos 18800
+ ypos 287
+ addUserKnob {20 User}
+ addUserKnob {12 pos}
+ pos {1997 948}
+ addUserKnob {7 RADIUS}
+ RADIUS 26
+ addUserKnob {4 status M {APP WIP RTK RTS CNT}}
+ status CNT
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.5
+ name Constant94
+ selected true
+ xpos 18700
+ ypos 50
+}
+Dot {
+ name Dot94
+ selected true
+ xpos 18734
+ ypos 159
+}
+Read {
+ inputs 0
+ origset true
+ name Read94
+ selected true
+ xpos 18600
+ ypos 50
+}
+Switch {
+ inputs 2
+ name Switch94
+ label "\[value this.which]"
+ selected true
+ xpos 18600
+ ypos 150
+}
+Crop {
+ box {0 -50 2048 938}
+ reformat true
+ intersect true
+ name Cr
